@@ -1,0 +1,4 @@
+serpapi
+openai
+python-dotenv
+requests
