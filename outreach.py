@@ -60,10 +60,10 @@ def generate_messages(scored_candidates, job_description):
         message = (
             f"Hi {name}, "
             f"We came across your profile and were really impressed by {characteristics_text}. "
-            f"{fit_explanation.capitalize()}.\n\n"
-            f"We're currently hiring for a role that we think you'd be a great fit for:\n\n"
-            f"{job_description.strip()}\n\n"
-            "Would you be open to a quick chat to discuss this opportunity?\n\n"
+            f"{fit_explanation.capitalize()}. "
+            f"We're currently hiring for a role that we think you'd be a great fit for: "
+            f"{job_description.strip()} "
+            "Would you be open to a quick chat to discuss this opportunity? "
             "Thanks!"
         )
         

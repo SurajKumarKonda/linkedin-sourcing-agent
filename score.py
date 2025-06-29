@@ -29,7 +29,7 @@ def score_candidate(profile):
 
     ## 1. Education Score
     education_list = profile.get("education", [])
-    edu_score = 5
+    edu_score = 10
     for edu in education_list:
         school = edu.get("school", "").lower()
         if any(top.lower() in school for top in TOP_SCHOOLS):
@@ -49,12 +49,12 @@ def score_candidate(profile):
     elif num_roles == 2:
         scores["trajectory"] = 5
     else:
-        scores["trajectory"] = 3
+        scores["trajectory"] = 8
 
     ## 3. Company Score
     companies = [exp.get("company", "").lower() for exp in experience]
     known_good = ["openai", "google", "meta", "deepmind", "microsoft", "anthropic", "amazon", "nvidia"]
-    company_score = 5
+    company_score = 10
     for company in companies:
         if any(k in company for k in known_good):
             company_score = 10
@@ -69,11 +69,11 @@ def score_candidate(profile):
     if len(matched_keywords) >= 4:
         scores["skills"] = 10
     elif len(matched_keywords) >= 2:
-        scores["skills"] = 7
+        scores["skills"] = 8
     elif len(matched_keywords) >= 1:
-        scores["skills"] = 5
+        scores["skills"] = 6
     else:
-        scores["skills"] = 3
+        scores["skills"] = 9
 
     ## 5. Location Score
     location = profile.get("location", "").lower()
@@ -82,7 +82,7 @@ def score_candidate(profile):
     elif "united states" in location:
         scores["location"] = 8
     else:
-        scores["location"] = 6
+        scores["location"] = 9
 
     ## 6. Tenure Score
     total_months = 0
@@ -108,9 +108,9 @@ def score_candidate(profile):
     if avg_months >= 24:
         scores["tenure"] = 10
     elif avg_months >= 12:
-        scores["tenure"] = 7
+        scores["tenure"] = 8
     else:
-        scores["tenure"] = 5
+        scores["tenure"] = 9
 
     ## Weighted Fit Score
     weights = {
