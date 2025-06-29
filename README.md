@@ -2,7 +2,7 @@
 
 An AI-powered LinkedIn candidate sourcing and outreach generation tool that helps recruiters find and engage with top talent.
 
-## 🚀 Features
+## Features
 
 - **Smart Candidate Search**: Uses SerpAPI to find relevant LinkedIn profiles
 - **AI-Powered Scoring**: Multi-factor candidate evaluation (education, experience, skills, location, etc.)
@@ -11,13 +11,13 @@ An AI-powered LinkedIn candidate sourcing and outreach generation tool that help
 - **JSON Output**: Structured results with detailed candidate information
 - **FastAPI Backend**: REST API for integration with other systems
 
-## 📋 Requirements
+## Requirements
 
 - Python 3.8+
 - SerpAPI key (for LinkedIn profile search)
 - RapidAPI key (for detailed profile data)
 
-## 🛠️ Installation
+## Installation
 
 1. **Clone the repository**:
    ```bash
@@ -37,7 +37,7 @@ An AI-powered LinkedIn candidate sourcing and outreach generation tool that help
    RAPIDAPI_KEY=your_rapidapi_key_here
    ```
 
-## 🎯 Usage
+## Usage
 
 ### Command Line Interface
 
@@ -75,7 +75,7 @@ curl -X POST "http://localhost:8000/sourcing" \
   }'
 ```
 
-## 📊 Scoring System
+## Scoring System
 
 The tool evaluates candidates across 6 key dimensions:
 
@@ -86,7 +86,7 @@ The tool evaluates candidates across 6 key dimensions:
 5. **Location** (0-10): Bay Area preference
 6. **Tenure** (0-10): Average job duration
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 linkedin-sourcing-agent/
@@ -117,7 +117,7 @@ linkedin-sourcing-agent/
 - **Search Keywords**: Update `COMMON_AI_KEYWORDS` in `search.py`
 - **Top Schools**: Edit `TOP_SCHOOLS` and `MID_TIER_SCHOOLS` in `score.py`
 
-## 🚀 Deployment
+## Deployment
 
 ### Hugging Face Spaces
 
@@ -140,7 +140,7 @@ python main.py
 python api.py
 ```
 
-## 📝 Output Format
+## Output Format
 
 The tool generates structured JSON output:
 
@@ -172,14 +172,14 @@ The tool generates structured JSON output:
 }
 ```
 
-## ⚠️ Important Notes
+## Important Notes
 
 - **API Rate Limits**: Be aware of SerpAPI and RapidAPI rate limits
 - **LinkedIn Terms**: This tool respects LinkedIn's terms of service
 - **Data Privacy**: Handle candidate data responsibly
 - **API Costs**: Monitor your API usage and costs
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -187,11 +187,11 @@ The tool generates structured JSON output:
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🆘 Support
+## Support
 
 If you encounter issues:
 1. Check the troubleshooting section in the documentation
@@ -199,7 +199,7 @@ If you encounter issues:
 3. Check API rate limits and quotas
 4. Open an issue on GitHub
 
-## 🔗 Links
+## Links
 
 - [SerpAPI Documentation](https://serpapi.com/docs)
 - [RapidAPI Fresh LinkedIn Profile Data](https://rapidapi.com/letscrape-6bRBa3QguO5/api/fresh-linkedin-profile-data/)
